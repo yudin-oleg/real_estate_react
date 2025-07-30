@@ -1,0 +1,17 @@
+/* Начальные стили */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	box-sizing: border-box;
+	border: none;
+}
+#root,
+body,
+html {
+	font-family: "Outfit", sans-serif;
+	width: 100%;
+	height: fit-content;
+}

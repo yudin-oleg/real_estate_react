@@ -1,4 +1,5 @@
 import "./App.css";
+import PropertyList from "./components/PropertyList/PropertyList";
 
 function App() {
 	return (
@@ -17,12 +18,25 @@ function App() {
 						<div className="country">Switzerland</div>
 					</div>
 					<div className="superhost-property-type">
-						<div className="superhost"></div>
-						<div className="property-type"></div>
+						<div className="superhost">
+							<label className="switch">
+								<input type="checkbox" />
+								<span class="slider round"></span>
+							</label>
+							<div className="superhost-text">Superhost</div>
+						</div>
+						{/* <div className="property-type"></div> */}
+						<select name="property-type">
+							<option value="">Property type</option>
+							<option value="1">One bedroom</option>
+							<option value="2">Two bedrooms</option>
+						</select>
 					</div>
 				</div>
 			</div>
-			<div className="background-dark"></div>
+			<div className="background-dark">
+				<PropertyList />
+			</div>
 		</>
 	);
 }

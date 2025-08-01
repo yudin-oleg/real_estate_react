@@ -1,6 +1,7 @@
 .background-image {
 	width: 100%;
 	height: 620px;
+	/* padding: 0px 72px; */
 	background-image: url("./assets/hero-image.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -21,26 +22,26 @@
 .motto {
 	font-size: 24px;
 }
-.background-dark {
-	height: fit-content;
-	width: 100%;
-	background-color: #121826;
-}
 .filters {
 	bottom: -51px;
 	left: 50%;
 	transform: translateX(-50%);
 	position: absolute;
-	height: 102px;
-	width: fit-content;
-	padding: 34px 40px;
+	height: 105px;
+	width: calc(100% - 144px);
+	display: flex;
+	justify-content: space-between;
+	padding: 32px 40px;
 	background-color: #22293a;
 	z-index: 4;
 	display: flex;
+	align-items: center;
 	border-radius: 15px;
+	border: 2px solid #7e869e40;
 }
 .countries {
 	display: flex;
+	height: 38px;
 }
 .countries > .country + .country {
 	margin-left: 12px;
@@ -58,4 +59,86 @@
 }
 .selected {
 	background-color: #4a5567;
+}
+.superhost-property-type {
+	display: flex;
+}
+.superhost {
+	display: flex;
+	margin-right: 20px;
+	align-items: center;
+}
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+input:checked + .slider {
+	background-color: #2196f3;
+}
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+.slider.round:before {
+	border-radius: 50%;
+}
+.superhost-text {
+	margin-left: 8px;
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	color: #f2f9fe;
+}
+select[name="property-type"] {
+	padding: 12px 24px;
+	border-radius: 10px;
+	background-color: transparent;
+	color: #f2f9fe;
+	border: 2px solid #7e869e40;
+}
+.background-dark {
+	height: fit-content;
+	width: 100%;
+	padding: 125px 72px 72px 72px;
+	background-color: #121826;
 }

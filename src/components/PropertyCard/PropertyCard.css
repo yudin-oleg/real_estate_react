@@ -1,22 +1,24 @@
-/* .property-card {
-	height: 360px;
-} */
 img {
 	width: 357px;
-	border-radius: 8px;
-	margin-bottom: 20px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.card-main-part {
+	padding: 20px;
+	border-bottom: 2px solid #7e869e40;
+	border-left: 2px solid #7e869e40;
+	border-right: 2px solid #7e869e40;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 .title {
 	font-size: 16px;
 	margin-bottom: 16px;
-	margin-left: 20px;
-	margin-right: 20px;
 	color: #f2f9fe;
 }
 .description {
 	font-size: 14px;
-	margin-left: 20px;
-	margin-right: 40px;
+	margin-right: 20px;
 	margin-bottom: 16px;
 	color: #7e869e40;
 }
@@ -29,9 +31,8 @@ img {
 	color: #7e869e40;
 }
 .house-guest {
-	margin-bottom: 16px;
-	margin-left: 20px;
-	margin-right: 20px;
+	padding-bottom: 16px;
+	border-bottom: 2px solid #7e869e40;
 }
 .house-guest p {
 	margin-left: 8px;
@@ -40,7 +41,7 @@ img {
 	margin-left: 20px;
 }
 .price-rating {
-	padding: 20px;
+	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

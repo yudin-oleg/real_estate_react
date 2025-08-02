@@ -1,5 +1,27 @@
-img {
+.property-card {
+	position: relative;
 	width: 357px;
+}
+.superhost-tag {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	height: 24px;
+	padding: 4px 8px;
+	display: flex;
+	background-color: #20293a;
+	border-radius: 5px;
+}
+.superhost-tag p {
+	font-size: 12px;
+	color: #f2f9fe;
+	margin-right: 2px;
+}
+.superhost-tag svg {
+	height: 16px;
+	width: 16px;
+}
+img {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }

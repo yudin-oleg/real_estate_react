@@ -6,6 +6,12 @@ import Star from "../Star";
 function PropertyCard({ property }) {
 	return (
 		<div className="property-card">
+			{property.superhost && (
+				<div className="superhost-tag">
+					<p>Superhost</p>
+					<Star className="superhost-star" />
+				</div>
+			)}
 			<img src={property.image} alt="property card" />
 			<div className="card-main-part">
 				<div className="title">{property.title}</div>

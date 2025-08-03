@@ -5,7 +5,13 @@ import PropertyList from "./components/PropertyList/PropertyList";
 function App() {
 	const [countryOption, setCountryOption] = useState("all-stays");
 	const [superhost, setSuperhost] = useState(false);
-	// const [propertyType, setPropertyType] = useState("1");
+	const [propertyType, setPropertyType] = useState("1");
+
+	const handleChange = (event) => {
+		setPropertyType(event.target.value);
+		// console.log("Selected value:", event.target.value);
+	};
+
 	return (
 		<>
 			<div className="background-image">
@@ -67,17 +73,28 @@ function App() {
 							</label>
 							<div className="superhost-text">Superhost</div>
 						</div>
-						{/* <div className="property-type"></div> */}
-						<select name="property-type">
-							<option value="">Property type</option>
-							<option value="1">One bedroom</option>
-							<option value="2">Two bedrooms</option>
-						</select>
+						<div className="select-wrapper">
+							<select
+								name="property-type"
+								value={propertyType}
+								onChange={handleChange}
+							>
+								<option value="" disabled defaultValue>
+									Property type
+								</option>
+								<option value="1">One bedroom</option>
+								<option value="2">Two bedrooms</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div className="background-dark">
-				<PropertyList countryOption={countryOption} superhost={superhost} />
+				<PropertyList
+					countryOption={countryOption}
+					superhost={superhost}
+					propertyType={propertyType}
+				/>
 			</div>
 		</>
 	);

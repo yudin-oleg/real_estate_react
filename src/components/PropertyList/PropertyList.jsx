@@ -2,7 +2,7 @@ import "./PropertyList.css";
 import { useState, useEffect } from "react";
 import PropertyCard from "../PropertyCard/PropertyCard.jsx";
 
-function PropertyList({ countryOption, superhost }) {
+function PropertyList({ countryOption, superhost, propertyType }) {
 	const [propertyList, setPropertyList] = useState([]);
 
 	useEffect(() => {
@@ -13,11 +13,19 @@ function PropertyList({ countryOption, superhost }) {
 			.then((data) => setPropertyList(data));
 	}, []);
 
-	function getPropertyList(countryOption, superhost, propertyList) {
+	function getPropertyList(
+		countryOption,
+		superhost,
+		propertyType,
+		propertyList
+	) {
 		if (countryOption === "all-stays") return propertyList;
+		console.log(propertyType);
 		return propertyList.filter(
 			(property) =>
-				property.location === countryOption && property.superhost === superhost
+				property.location === countryOption &&
+				property.superhost === superhost &&
+				property.capacity.bedroom == propertyType
 		);
 	}
 
@@ -25,11 +33,14 @@ function PropertyList({ countryOption, superhost }) {
 		<>
 			<div className="background-dark-text">Over 200 stays</div>
 			<div className="property-list">
-				{getPropertyList(countryOption, superhost, propertyList).map(
-					(property) => (
-						<PropertyCard key={property.id} property={property} />
-					)
-				)}
+				{getPropertyList(
+					countryOption,
+					superhost,
+					propertyType,
+					propertyList
+				).map((property) => (
+					<PropertyCard key={property.id} property={property} />
+				))}
 			</div>
 		</>
 	);

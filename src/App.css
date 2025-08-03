@@ -130,11 +130,30 @@ input:checked + .slider:before {
 	color: #f2f9fe;
 }
 select[name="property-type"] {
+	width: 156px;
 	padding: 12px 24px;
 	border-radius: 10px;
 	background-color: transparent;
 	color: #f2f9fe;
 	border: 2px solid #7e869e40;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	position: relative;
+	display: inline-block;
+}
+.select-wrapper::after {
+	content: url("./assets/Expand_down.svg");
+	position: absolute;
+	top: 50%;
+	right: 64px;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+option {
+	background-color: #22293a;
+	color: #f2f9fe;
+	padding: 5px 10px;
 }
 .background-dark {
 	height: fit-content;

@@ -1,7 +1,6 @@
 .background-image {
 	width: 100%;
 	height: 620px;
-	/* padding: 0px 72px; */
 	background-image: url("./assets/hero-image.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -11,12 +10,13 @@
 	position: absolute;
 	top: 180px;
 	left: 140px;
-	width: 420px;
+	width: 430px;
 	color: #111725;
 	z-index: 2;
 }
 .label {
 	font-size: 64px;
+	font-weight: bolder;
 	margin-bottom: 8px;
 }
 .motto {
@@ -42,9 +42,19 @@
 .countries {
 	display: flex;
 	height: 38px;
+	flex-direction: row;
 }
-.countries > .country + .country {
+.all-stays-norway {
+	display: flex;
+}
+.finland-sweden {
+	display: flex;
+}
+.country {
 	margin-left: 12px;
+}
+.country:first-child {
+	margin-left: 0px;
 }
 .country {
 	padding: 8px 12px;
@@ -158,6 +168,69 @@ option {
 .background-dark {
 	height: fit-content;
 	width: 100%;
-	padding: 125px 72px 72px 72px;
+	padding: 95px 72px 72px 72px;
 	background-color: #121826;
+}
+@media (max-width: 1024px) {
+	.label-motto {
+		left: 112px;
+	}
+}
+@media (max-width: 640px) {
+	.background-image {
+		height: 300px;
+	}
+	.label-motto {
+		top: 80px;
+		left: 64px;
+		width: 300px;
+	}
+	.label {
+		font-size: 32px;
+	}
+	.filters {
+		bottom: -244px;
+		height: fit-content;
+		width: calc(100% - 128px);
+		flex-direction: column;
+	}
+	.countries {
+		flex-direction: column;
+		align-items: center;
+		height: fit-content;
+		margin-bottom: 16px;
+	}
+	.country {
+		margin-left: 0px;
+		max-width: 96px;
+	}
+	.all-stays-norway {
+		margin-bottom: 8px;
+	}
+	.norway {
+		margin-left: 12px;
+	}
+	.finland-sweden {
+		margin-bottom: 8px;
+	}
+	.sweden {
+		margin-left: 12px;
+	}
+	.superhost-property-type {
+		flex-direction: column;
+	}
+	.superhost {
+		margin-right: 0px;
+		justify-content: center;
+		margin-bottom: 16px;
+	}
+	.select-wrapper::after {
+		right: 200px;
+		top: 240px;
+	}
+	.background-dark {
+		padding-top: 295px;
+		padding-left: calc((100% - 358px) / 2);
+		padding-right: calc((100% - 358px) / 2);
+	}
 }

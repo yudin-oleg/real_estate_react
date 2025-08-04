@@ -1,6 +1,7 @@
 .background-dark-text {
 	margin-bottom: 32px;
 	font-size: 24px;
+	font-weight: bold;
 	color: #f2f9fe;
 }
 .property-list {
@@ -9,4 +10,14 @@
 	grid-template-columns: repeat(3, 1fr);
 	row-gap: 72px;
 	column-gap: 32px;
+}
+@media (max-width: 1024px) {
+	.property-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 640px) {
+	.property-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

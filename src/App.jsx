@@ -9,7 +9,6 @@ function App() {
 
 	const handleChange = (event) => {
 		setPropertyType(event.target.value);
-		// console.log("Selected value:", event.target.value);
 	};
 
 	return (
@@ -21,37 +20,41 @@ function App() {
 				</div>
 				<div className="filters">
 					<div className="countries">
-						<div
-							className={`country ${
-								countryOption === "all-stays" ? "selected" : ""
-							}`}
-							onClick={() => setCountryOption("all-stays")}
-						>
-							All Stays
+						<div className="all-stays-norway">
+							<div
+								className={`country ${
+									countryOption === "all-stays" ? "selected" : ""
+								}`}
+								onClick={() => setCountryOption("all-stays")}
+							>
+								All Stays
+							</div>
+							<div
+								className={`country norway ${
+									countryOption === "Norway" ? "selected" : ""
+								}`}
+								onClick={() => setCountryOption("Norway")}
+							>
+								Norway
+							</div>
 						</div>
-						<div
-							className={`country ${
-								countryOption === "Norway" ? "selected" : ""
-							}`}
-							onClick={() => setCountryOption("Norway")}
-						>
-							Norway
-						</div>
-						<div
-							className={`country ${
-								countryOption === "Finland" ? "selected" : ""
-							}`}
-							onClick={() => setCountryOption("Finland")}
-						>
-							Finland
-						</div>
-						<div
-							className={`country ${
-								countryOption === "Sweden" ? "selected" : ""
-							}`}
-							onClick={() => setCountryOption("Sweden")}
-						>
-							Sweden
+						<div className="finland-sweden">
+							<div
+								className={`country ${
+									countryOption === "Finland" ? "selected" : ""
+								}`}
+								onClick={() => setCountryOption("Finland")}
+							>
+								Finland
+							</div>
+							<div
+								className={`country sweden ${
+									countryOption === "Sweden" ? "selected" : ""
+								}`}
+								onClick={() => setCountryOption("Sweden")}
+							>
+								Sweden
+							</div>
 						</div>
 						<div
 							className={`country ${
